@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 function App() {
   return (
     <div>
-      <H2>Functional Justice</H2>
+      <H2></H2>
       <br />
       <H5>How It Works</H5>
       <Text>

@@ -1,4 +1,14 @@
-const express = require("express"); //Line 1
+const express = require("express");
+
+const mongoose = require("mongoose");
+const cors = require("cors");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const P = require("bluebird");
+const R = require("ramda");
+const config = require("config");
+
+//Line 1
 const app = express(); //Line 2
 const port = process.env.PORT || 5000; //Line 3
 
