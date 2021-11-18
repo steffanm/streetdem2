@@ -66,6 +66,9 @@ export default function TopBarNavigation() {
                   <li>
                     <Link to="/signUp">Sign Up</Link>
                   </li>
+                  <li>
+                    <Link to="/providerDetails">Provider Details</Link>
+                  </li>
                 </ul>
               </nav>
             </Menu>
@@ -90,10 +93,10 @@ export default function TopBarNavigation() {
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
-                onClick={handleMenu}
                 color="inherit"
               >
                 <AccountCircle />
+                <Link to="/userDetails">User Details </Link>
               </IconButton>
             </div>
           )}

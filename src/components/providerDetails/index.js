@@ -1,37 +1,36 @@
 import React, { Component } from "react";
 
 import { ThemeProvider } from "@mui/material/styles";
-import Button from "@mui/material/Button";
 
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import CreateServiceModal from "../common/createServiceModal";
-import EditUserModal from "../common/editUserModal";
 
-export class UserDetails extends Component {
+import EditProviderModal from "../common/editProviderModal";
+
+export class ProviderDetails extends Component {
   render() {
     return (
       <div>
         <List>
           <ListItem>
-            <ListItemText primary="First Name" secondary="firstName" />
+            <ListItemText primary="Provider Name" secondary="Provider Name" />
           </ListItem>
           <ListItem>
-            <ListItemText primary="Last Name" secondary="lastName" />
+            <ListItemText primary="Address" secondary="Address" />
           </ListItem>
           <ListItem>
-            <ListItemText primary="Email" secondary="email" />
+            <ListItemText primary="Email" secondary="Email" />
           </ListItem>
         </List>
         <br />
         <div>
-          <CreateServiceModal />
-          <EditUserModal />
+          <EditProviderModal />
         </div>
       </div>
     );
   }
 }
 
-export default UserDetails;
+export default ProviderDetails;

@@ -6,6 +6,8 @@ import ProviderSearch from "./components/providerSearch";
 import SignUp from "./components/singUp";
 
 import TopBarNavigation from "./components/topBarNavigation";
+import UserDetails from "./components/userDetails";
+import ProviderDetails from "./components/providerDetails";
 
 export default function App() {
   return (
@@ -18,6 +20,8 @@ export default function App() {
           <Route path="/home" element={<Home />}></Route>
           <Route path="/providerSearch" element={<ProviderSearch />}></Route>
           <Route path="/signUp" element={<SignUp />}></Route>
+          <Route path="/userDetails" element={<UserDetails />}></Route>
+          <Route path="/providerDetails" element={<ProviderDetails />}></Route>
         </Routes>
       </div>
     </Router>
