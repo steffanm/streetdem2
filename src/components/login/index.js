@@ -1,34 +1,61 @@
-import React from "react";
+import * as React from "react";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
 
-import { H2, H5, Text } from "@blueprintjs/core";
-import { buttonSignUp } from "../common";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-const login = () => {
+const theme = createTheme();
+
+export default function Login() {
   return (
-    <div>
-      <H2></H2>
-      <br />
-      <H5>How It Works</H5>
-      <Text>
-        1. Create an account. <br /> 2. Take steps to improve your life with the
-        help of our participating providers, who will add a record to your
-        account.
-        <br /> 3. Then use the records of all your hard work to ask prosecutors
-        and courts to reduce your charges or sentences.
-        <br />
-      </Text>
-      <br />
-      <H5>Ready to get started?</H5>
-      <Text>
-        For service providers, public defenders, prosecutors, and courts
-        interested in participating, please email us{" "}
-        <a href="mailto: functional@streetdemocracy.org">
-          functional@streetdemocracy.org
-        </a>
-        .
-      </Text>
-      <buttonSignUp>sign up</buttonSignUp>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <Box
+          sx={{
+            marginTop: 8,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Typography component="h1" variant="h5">
+            Login
+          </Typography>
+          <Box component="form" noValidate sx={{ mt: 3 }}>
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="email"
+                  label="Email Address"
+                  name="email"
+                  autoComplete="email"
+                />
+              </Grid>
+            </Grid>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Send Login Link
+            </Button>
+          </Box>
+        </Box>
+      </Container>
+    </ThemeProvider>
   );
-};
-export default login;
+}

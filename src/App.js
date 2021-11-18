@@ -1,32 +1,23 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import login from "./components/login";
-import home from "./components/home";
+import Login from "./components/login";
+import Home from "./components/home";
+import ProviderSearch from "./components/providerSearch";
+import SignUp from "./components/singUp";
+
+import TopBarNavigation from "./components/topBarNavigation";
 
 export default function App() {
   return (
     <Router>
+      <TopBarNavigation />
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">login</Link>
-            </li>
-            <li>
-              <Link to="/home">home</Link>
-            </li>
-            <li>
-              <Link to="/service">service</Link>
-            </li>
-            <li>
-              <Link to="/provider">provider</Link>
-            </li>
-          </ul>
-        </nav>
-
         <Routes>
-          <Route exsact path="/" element={<login />}></Route>
-          <Route path="/home" element={<home />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/providerSearch" element={<ProviderSearch />}></Route>
+          <Route path="/signUp" element={<SignUp />}></Route>
         </Routes>
       </div>
     </Router>

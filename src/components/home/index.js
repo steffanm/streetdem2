@@ -1,8 +1,8 @@
 import React from "react";
-import { buttonSignUp } from "../common";
+import ButtonSignUp from "../common/buttonSignUp";
 import { H2, H5, Text } from "@blueprintjs/core";
 
-const home = () => {
+const Home = () => {
   return (
     <div>
       <H2></H2>
@@ -26,8 +26,8 @@ const home = () => {
         </a>
         .
       </Text>
-      <buttonSignUp></buttonSignUp>
+      <ButtonSignUp />
     </div>
   );
 };
-export default home;
+export default Home;
