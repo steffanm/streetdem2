@@ -89,6 +89,7 @@ export default function EditProviderModal() {
           </Button>
           <Button
             type="submit"
+            onClick={handleClose}
             fullWidth
             variant="contained"
             sx={{ mt: 3, mb: 2 }}

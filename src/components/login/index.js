@@ -13,6 +13,8 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import ButtonSignUp from "../common/buttonSignUp";
+import { H2, H5, Text } from "@blueprintjs/core";
 
 const theme = createTheme();
 
@@ -53,6 +55,10 @@ export default function Login() {
             >
               Send Login Link
             </Button>
+            <Text>
+              Need an Account?
+              <ButtonSignUp />
+            </Text>
           </Box>
         </Box>
       </Container>

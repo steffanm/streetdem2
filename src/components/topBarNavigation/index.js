@@ -10,6 +10,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import NavbarDrawer from "../common/navbarDrawer";
+
 export default function TopBarNavigation() {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -27,64 +33,15 @@ export default function TopBarNavigation() {
       <AppBar position="static">
         <Toolbar>
           <div>
-            <MenuIcon
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleMenu}
-              color="inherit"
-            >
-              <AccountCircle />
-            </MenuIcon>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorEl}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorEl)}
-              onClose={handleClose}
-            >
-              <nav>
-                <ul>
-                  <li>
-                    <Link to="/login">login</Link>
-                  </li>
-                  <li>
-                    <Link to="/home">home</Link>
-                  </li>
-                  <li>
-                    <Link to="/providerSearch">provider search</Link>
-                  </li>
-                  <li>
-                    <Link to="/signUp">Sign Up</Link>
-                  </li>
-                  <li>
-                    <Link to="/providerDetails">Provider Details</Link>
-                  </li>
-                </ul>
-              </nav>
-            </Menu>
+            <NavbarDrawer />
           </div>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          ></IconButton>
+
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Functional Justice
           </Typography>
+
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Link to="/providerSearch">Services </Link>
+            <Link to="/provider-search">Services </Link>
           </Typography>
           {auth && (
             <div>
@@ -96,7 +53,9 @@ export default function TopBarNavigation() {
                 color="inherit"
               >
                 <AccountCircle />
-                <Link to="/userDetails">User Details </Link>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                  <Link to="/user-details">User Details </Link>
+                </Typography>
               </IconButton>
             </div>
           )}
