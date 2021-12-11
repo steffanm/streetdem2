@@ -54,7 +54,7 @@ export default function EditUserModal() {
                 required
                 fullWidth
                 id="userName"
-                label="User Name"
+                label="First Name"
                 autoFocus
               />
             </Grid>
@@ -63,7 +63,7 @@ export default function EditUserModal() {
                 required
                 fullWidth
                 id="providerAddress"
-                label="Provider Address"
+                label="Last Name"
                 name="providerAddress"
                 autoComplete="provider address"
               />
@@ -79,12 +79,7 @@ export default function EditUserModal() {
               />
             </Grid>
 
-            <Grid item xs={12}>
-              <FormControlLabel
-                control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="agree to terms of service"
-              />
-            </Grid>
+            <Grid item xs={12}></Grid>
           </Grid>
           <Button
             type="submit"
@@ -92,7 +87,7 @@ export default function EditUserModal() {
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
           >
-            Create
+            Confirm
           </Button>
           <Button
             type="submit"
