@@ -112,6 +112,10 @@ export default function NavbarDrawer() {
           <MoreHorizIcon />
           <Link to="/provider-search">provider search</Link>
         </MenuItem>
+        <MenuItem onClick={handleClose} disableRipple>
+          <MoreHorizIcon />
+          <Link to="/user-search">people search</Link>
+        </MenuItem>
       </StyledMenu>
     </div>
   );

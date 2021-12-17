@@ -11,7 +11,9 @@ const searchSlice = createSlice({
   name: "search",
   initialState,
   reducers: {
-    userSearhResults(state, action) {},
+    userSearhResults(state, action) {
+      return {};
+    },
     userSearchFirstName(state, action) {},
     userSearchLastName(state, action) {},
     userSearchFDOB(state, action) {},
