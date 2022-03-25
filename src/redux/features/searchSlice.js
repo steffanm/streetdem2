@@ -14,7 +14,9 @@ const searchSlice = createSlice({
     userSearhResults(state, action) {
       return {};
     },
-    userSearchFirstName(state, action) {},
+    userSearchFirstName(state, action) {
+      return { ...state, searchFirstName: action };
+    },
     userSearchLastName(state, action) {},
     userSearchFDOB(state, action) {},
   },

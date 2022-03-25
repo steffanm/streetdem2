@@ -35,7 +35,7 @@ export default function App() {
       <div>
         {/* <AuthRoute /> */}
         <Routes>
-          <Route path="home" element={<Navigate to="/about" />} />
+          <Route path="home" element={<Navigate to="/" />} />
           <Route path="/login" element={<Login />}></Route>
 
           <Route path="/" element={<Home />}></Route>

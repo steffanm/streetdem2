@@ -9,8 +9,9 @@ const serviceLetterSlice = createSlice({
   name: "service letter",
   initialState,
   reducers: {
-    userLogIn(state, action) {},
-    userLogOut(state, action) {},
+    createServiceLetter(state, action) {},
+    editServiceLetter(state, action) {},
+    deleteServiceLetter(state, action) {},
   },
 });
 
