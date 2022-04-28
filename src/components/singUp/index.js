@@ -23,28 +23,17 @@ const theme = createTheme();
 //2.
 //prevent bad characters/password strength
 //3.
-//
+//react web server express ?
 
-export default class SignUp extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-
-  handleSubmit(event) {
-    alert("Your email address" + this.state.value);
-    console.log(event.target.firstName.value);
+export default function SignUp() {
+  const handleSubmit = (event) => {
     event.preventDefault();
-  }
+    alert("Your email address" + event.target.email.value);
+    console.log(event.target.firstName.value);
+  };
 
-  render() {
-    return (
+  return (
+    <form onSubmit={handleSubmit}>
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="xs">
           <CssBaseline />
@@ -62,17 +51,10 @@ export default class SignUp extends React.Component {
             <Typography component="h1" variant="h5">
               Sign up
             </Typography>
-            <Box
-              onSubmit={this.handleSubmit}
-              method="post"
-              component="form"
-              noValidate
-              sx={{ mt: 3 }}
-            >
+            <Box method="post" component="form" noValidate sx={{ mt: 3 }}>
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
-                    onChange={this.handleChange}
                     autoComplete="given-name"
                     name="firstName"
                     required
@@ -84,7 +66,6 @@ export default class SignUp extends React.Component {
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <TextField
-                    onChange={this.handleChange}
                     required
                     fullWidth
                     id="lastName"
@@ -95,7 +76,6 @@ export default class SignUp extends React.Component {
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
-                    onChange={this.handleChange}
                     required
                     fullWidth
                     id="email"
@@ -131,6 +111,6 @@ export default class SignUp extends React.Component {
           </Box>
         </Container>
       </ThemeProvider>
-    );
-  }
+    </form>
+  );
 }
