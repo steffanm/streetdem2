@@ -2,7 +2,8 @@ version: "2.1"
 
 services:
   mongo:
-    container_name: street-democracy-2-mongo
+    volumes:
+      - "./streetstuff:/data/db"
     image: mongo:4.2.9
     ports:
       - "27017:27017"

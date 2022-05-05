@@ -35,7 +35,7 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:5000/express_backend")
+    fetch("/express_backend")
       .then((response) => response.json())
       .then((data) => this.setState({ data }));
   }
